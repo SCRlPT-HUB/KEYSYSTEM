@@ -6,7 +6,7 @@ local player = Players.LocalPlayer
 local PlayerGui = player:WaitForChild("PlayerGui")
 
 local correctKey = "AdrianX9RzK7"
-local keyPageURL = "https://adrianhub-key-page.com"
+local keyPageURL = "https://rinku.pro/AdrianHub"
 
 -- 🔘 Create Pet Detector Toggle Button
 local keyToggleGui = Instance.new("ScreenGui", PlayerGui)
