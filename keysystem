@@ -24,21 +24,18 @@ Instance.new("UICorner", toggleButton).CornerRadius = UDim.new(0, 10)
 
 -- 🔐 Key GUI Logic
 local function showKeyGUI()
-	-- 🔔 Notification 1: Key permanent
 	StarterGui:SetCore("SendNotification", {
 		Title = "🔐 AdrianHub Notice",
 		Text = "Don’t worry, the key is permanent once you open the key system.",
 		Duration = 7
 	})
 
-	-- 🔔 Notification 2: How to use key
 	StarterGui:SetCore("SendNotification", {
 		Title = "📋 How To Use Key",
 		Text = "After copying the key link, paste it into your browser (Chrome, Safari, etc). The key system is simple—no apps, no popups, and no annoying ads.",
 		Duration = 8
 	})
 
-	-- 🔔 Notification 3: No random apps
 	StarterGui:SetCore("SendNotification", {
 		Title = "🚫 Reminder",
 		Text = "You do NOT need to download any random apps or APKs to get the key.",
@@ -117,7 +114,6 @@ local function showKeyGUI()
 	copyBtn.TextSize = 14
 	Instance.new("UICorner", copyBtn).CornerRadius = UDim.new(0, 8)
 
-	-- ✅ Unlock Logic
 	submit.MouseButton1Click:Connect(function()
 		if input.Text == correctKey then
 			status.Text = "✅ Access Granted!"
@@ -129,7 +125,6 @@ local function showKeyGUI()
 		end
 	end)
 
-	-- 📋 Copy Key
 	copyBtn.MouseButton1Click:Connect(function()
 		if setclipboard then
 			setclipboard(keyPageURL)
@@ -137,7 +132,6 @@ local function showKeyGUI()
 		end
 	end)
 
-	-- 🌐 Open Link in Browser
 	getKey.MouseButton1Click:Connect(function()
 		if setclipboard then setclipboard(keyPageURL) end
 		if syn and syn.open then
@@ -150,7 +144,6 @@ local function showKeyGUI()
 	end)
 end
 
--- 🖱️ Button Click Opens Key GUI
 toggleButton.MouseButton1Click:Connect(function()
 	showKeyGUI()
 end)
